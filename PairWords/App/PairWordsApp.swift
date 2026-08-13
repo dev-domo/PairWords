@@ -11,6 +11,7 @@ import ComposableArchitecture
 
 @main
 struct PairWordsApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     let store = Store(initialState: DictionaryFeature.State()) {
         DictionaryFeature()
