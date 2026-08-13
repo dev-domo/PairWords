@@ -1,0 +1,46 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isGroupMember(groupId) {
+      return isSignedIn() &&
+        request.auth.uid in get(/databases/$(database)/documents/groups/$(groupId)).data.memberIds;
+    }
+
+    match /groups/{groupId} {
+      allow read: if isSignedIn();
+      allow create: if isSignedIn();
+
+      allow update: if isSignedIn() && (
+        // 가입: 본인 uid 추가
+        request.resource.data.memberIds == resource.data.memberIds.concat([request.auth.uid]) ||
+        // 탈퇴: 본인 uid 제거
+        (isGroupMember(groupId) &&
+         request.resource.data.memberIds == resource.data.memberIds.removeAll([request.auth.uid]))
+      );
+
+      allow delete: if false;
+
+      match /slangs/{slangId} {
+        allow read, create: if isGroupMember(groupId);
+        allow update: if isGroupMember(groupId);
+        allow delete: if false;
+
+        match /meanings/{meaningId} {
+          allow read, create: if isGroupMember(groupId);
+          allow update, delete: if false;
+        }
+
+        match /recordings/{recordingId} {
+          allow read, create: if isGroupMember(groupId);
+          allow update, delete: if false;
+        }
+      }
+    }
+  }
+}
