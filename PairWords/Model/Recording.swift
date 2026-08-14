@@ -9,7 +9,7 @@ import FirebaseFirestore
 
 struct Recording: Codable, Identifiable, Equatable {
     @DocumentID var id: String?
-    var audioURL: String
-    var createdBy: String
-    var createdAt: Date
+    let audioURL: String
+    let createdBy: String
+    let createdAt: Date
 }

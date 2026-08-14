@@ -9,7 +9,7 @@ import FirebaseFirestore
 
 struct Slang: Codable, Identifiable, Equatable {
     @DocumentID var id: String?
-    var name: String
-    var createdBy: String
-    var createdAt: Date
+    let name: String
+    let createdBy: String
+    let createdAt: Date
 }

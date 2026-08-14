@@ -9,7 +9,7 @@ import FirebaseFirestore
 
 struct Meaning: Codable, Identifiable, Equatable {
     @DocumentID var id: String?
-    var text: String
-    var createdBy: String
-    var createdAt: Date
+    let text: String
+    let createdBy: String
+    let createdAt: Date
 }
