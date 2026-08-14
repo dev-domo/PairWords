@@ -9,7 +9,7 @@ import FirebaseFirestore
 
 struct Group: Codable, Identifiable, Equatable {
     @DocumentID var id: String?
-    let code: String
+    let enterCode: String
     var memberIds: [String]
     let createdAt: Date
 }
