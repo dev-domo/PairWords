@@ -13,6 +13,8 @@
 		DA62F1B9302D4F4100D1C642 /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = DA62F1B8302D4F4100D1C642 /* FirebaseAnalyticsCore */; };
 		DA62F1BB302D4F4100D1C642 /* FirebaseAnalyticsIdentitySupport in Frameworks */ = {isa = PBXBuildFile; productRef = DA62F1BA302D4F4100D1C642 /* FirebaseAnalyticsIdentitySupport */; };
 		DA62F1CA302D5B3C00D1C642 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DA62F1C9302D5B3C00D1C642 /* FirebaseFirestore */; };
+		DA77AB31302EB2E500DA598F /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DA77AB30302EB2E500DA598F /* FirebaseStorage */; };
+		DA77AB3B302EB56300DA598F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DA77AB3A302EB56300DA598F /* FirebaseAuth */; };
 		DACA16EC30256A900059F922 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = DACA16EB30256A900059F922 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +68,9 @@
 				DACA16EC30256A900059F922 /* ComposableArchitecture in Frameworks */,
 				DA62F1BB302D4F4100D1C642 /* FirebaseAnalyticsIdentitySupport in Frameworks */,
 				DA62F1B9302D4F4100D1C642 /* FirebaseAnalyticsCore in Frameworks */,
+				DA77AB3B302EB56300DA598F /* FirebaseAuth in Frameworks */,
 				DA62F1B7302D4F4100D1C642 /* FirebaseAnalytics in Frameworks */,
+				DA77AB31302EB2E500DA598F /* FirebaseStorage in Frameworks */,
 				DA62F1B3302D4F4100D1C642 /* FirebaseAI in Frameworks */,
 				DA62F1CA302D5B3C00D1C642 /* FirebaseFirestore in Frameworks */,
 			);
@@ -144,6 +148,8 @@
 				DA62F1B8302D4F4100D1C642 /* FirebaseAnalyticsCore */,
 				DA62F1BA302D4F4100D1C642 /* FirebaseAnalyticsIdentitySupport */,
 				DA62F1C9302D5B3C00D1C642 /* FirebaseFirestore */,
+				DA77AB30302EB2E500DA598F /* FirebaseStorage */,
+				DA77AB3A302EB56300DA598F /* FirebaseAuth */,
 			);
 			productName = PairWords;
 			productReference = DACA16C030256A0C0059F922 /* PairWords.app */;
@@ -365,7 +371,9 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -422,6 +430,8 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_VERSION = 6.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -450,10 +460,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -482,10 +492,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -504,9 +514,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PairWords.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PairWords";
 			};
@@ -526,9 +537,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PairWords.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PairWords";
 			};
@@ -546,9 +558,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = PairWords;
 			};
@@ -566,9 +579,10 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = NO;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = PairWords;
 			};
@@ -664,6 +678,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DA62F1B1302D4F4100D1C642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		DA77AB30302EB2E500DA598F /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA62F1B1302D4F4100D1C642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		DA77AB3A302EB56300DA598F /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DA62F1B1302D4F4100D1C642 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 		DACA16EB30256A900059F922 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
