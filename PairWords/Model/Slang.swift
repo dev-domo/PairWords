@@ -5,11 +5,12 @@
 //  Created by 더스틴 on 8/13/26.
 //
 
-import FirebaseFirestore
+@preconcurrency import FirebaseFirestore
 
-struct Slang: Codable, Identifiable, Equatable {
+struct Slang: Codable, Identifiable, Equatable, Sendable {
     @DocumentID var id: String?
-    var name: String
-    var createdBy: String
-    var createdAt: Date
+    let name: String
+    let representativeMeaning: String
+    let createdBy: String
+    let createdAt: Date
 }

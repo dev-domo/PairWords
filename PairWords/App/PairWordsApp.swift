@@ -13,7 +13,7 @@ import ComposableArchitecture
 struct PairWordsApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
-    let store = Store(initialState: DictionaryFeature.State()) {
+    let store = Store(initialState: DictionaryFeature.State(groupID: "1")) {
         DictionaryFeature()
     }
     

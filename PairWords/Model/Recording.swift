@@ -5,11 +5,11 @@
 //  Created by 더스틴 on 8/13/26.
 //
 
-import FirebaseFirestore
+@preconcurrency import FirebaseFirestore
 
-struct Recording: Codable, Identifiable, Equatable {
+struct Recording: Codable, Identifiable, Equatable, Sendable {
     @DocumentID var id: String?
-    var audioURL: String
-    var createdBy: String
-    var createdAt: Date
+    let audioURL: String
+    let createdBy: String
+    let createdAt: Date
 }
