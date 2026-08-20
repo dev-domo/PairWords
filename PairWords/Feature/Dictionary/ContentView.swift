@@ -14,13 +14,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text("\(store.count)")
-                        
-            Button {
-                store.send(.addButtonDidTap)
-            } label: {
-                Text("단어 추가하기")
-            }
+           
         }
         .padding()
     }
