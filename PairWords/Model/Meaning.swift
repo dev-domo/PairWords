@@ -5,9 +5,9 @@
 //  Created by 더스틴 on 8/13/26.
 //
 
-import FirebaseFirestore
+@preconcurrency import FirebaseFirestore
 
-struct Meaning: Codable, Identifiable, Equatable {
+struct Meaning: Codable, Identifiable, Equatable, Sendable {
     @DocumentID var id: String?
     let text: String
     let createdBy: String
